@@ -5,8 +5,11 @@
         (target elements may be repeating...)
     
     Solution:
+        Simply Performing binary search 2 times one finding the element position for 1st occurence second for last occurence.
+
         - Perform binary search and for first and last position 
             if the target matches check the left and right elements.
+        
 
     Input: nums = [5,7,7,8,8,10], target = 8
     Output: [3,4]
