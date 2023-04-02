@@ -96,4 +96,37 @@ class Solution:
 
 solution = Solution()
 
-print(solution.searchRange([2,2], 2))
+tests = [
+    {
+        "input": {
+            "array": [5,7,7,8,8,10],
+            "target": 8
+        },
+        "output": [3,4]
+    },
+    {
+        "input": {
+            "array": [5,7,7,8,8,10],
+            "target": 6
+        },
+        "output": [-1,-1]
+    },
+    {
+        "input": {
+            "array": [],
+            "target": 8
+        },
+        "output": [-1,4]
+    }
+    # TODO: Add More...
+]
+
+for index, case in enumerate(tests):
+    output = solution.searchRange(**case['input'])
+    if output == case['output']:
+        print(f'Test {index}: Passed')
+    else:
+        print(f'Test {index}: Failed')
+        print('output: ', output)
+        print('expected: ', case['output'])
+    print('\n')
